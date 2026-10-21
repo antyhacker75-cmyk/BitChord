@@ -21,7 +21,7 @@
  *
  * Taken from EchoMusicApp/Echo-Music, which carries the three modifications
  * listed above; BitChord's own use of it is in
- * [com.music.astrotune.ui.components.GlassNavBar]. One further change here:
+ * [com.music.bitchord.ui.components.GlassNavBar]. One further change here:
  *
  * - `tabBarContentModifier` is a `@Composable () -> Modifier` factory rather
  *   than a single Modifier value. It is applied to three surfaces of three
@@ -112,14 +112,14 @@ import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.music.astrotune.data.settings.AppSettings
-import com.music.astrotune.ui.components.GlassSpring
-import com.music.astrotune.ui.components.LocalGlassExport
-import com.music.astrotune.ui.components.backdrop.backdrops.layerBackdrop
-import com.music.astrotune.ui.components.backdrop.backdrops.rememberLayerBackdrop
-import com.music.astrotune.ui.components.isGlassSupported
-import com.music.astrotune.ui.haptics.Haptic
-import com.music.astrotune.ui.haptics.rememberHaptics
+import com.music.bitchord.data.settings.AppSettings
+import com.music.bitchord.ui.components.GlassSpring
+import com.music.bitchord.ui.components.LocalGlassExport
+import com.music.bitchord.ui.components.backdrop.backdrops.layerBackdrop
+import com.music.bitchord.ui.components.backdrop.backdrops.rememberLayerBackdrop
+import com.music.bitchord.ui.components.isGlassSupported
+import com.music.bitchord.ui.haptics.Haptic
+import com.music.bitchord.ui.haptics.rememberHaptics
 import kotlin.math.roundToInt
 
 /** Hoisted so the default is one stable lambda rather than a new one per call. */
