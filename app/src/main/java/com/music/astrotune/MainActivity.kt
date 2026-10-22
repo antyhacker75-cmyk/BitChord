@@ -4037,11 +4037,23 @@ private fun BitChordApp(
                         )
                         Spacer(Modifier.height(8.dp))
                     }
-                    FloatingBottomBar(
+                    GlassNavBar(
                         tabs = tabs,
                         selectedIndex = selectedTab,
-                        hazeState = hazeState,
                         onTabSelected = onTabSelected,
+                        scrollConnection = rememberFloatingTabBarScrollConnection(),
+                        song = player.song,
+                        isPlaying = player.isPlaying,
+                        isLoading = playPauseBusy,
+                        onPlayPause = { togglePlayPause() },
+                        onNext = { controller?.seekToNextMediaItem() },
+                        onPrevious = { controller?.seekToPrevious() },
+                        onExpand = if (reducePlayerMotion) { { showNowPlaying = true } } else { playerSheetMotion::open },
+                        controlsLocked = controlsLocked,
+                        onBlockedControl = showHostOnlyNotice,
+                        dock = activeDock,
+                        pull = playerSheetMotion.takeIf { !reducePlayerMotion },
+                        modifier = Modifier.fillMaxWidth(),
                     )
                 }
             }

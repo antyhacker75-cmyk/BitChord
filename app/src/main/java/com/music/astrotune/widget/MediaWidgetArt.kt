@@ -16,7 +16,7 @@ import android.graphics.Shader
 import android.os.SystemClock
 import android.util.LruCache
 import coil3.SingletonImageLoader
-import coil3.request.ImageRequest
+import coil.request.ImageRequest
 import coil3.request.SuccessResult
 import coil3.request.allowHardware
 import coil3.toBitmap

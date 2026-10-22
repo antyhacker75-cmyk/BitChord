@@ -109,10 +109,10 @@ import androidx.compose.ui.unit.sp
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.border
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import coil3.compose.AsyncImage
+import coil.compose.AsyncImage
 import coil3.compose.LocalPlatformContext
-import coil3.compose.AsyncImagePainter
-import coil3.request.ImageRequest
+import coil.compose.AsyncImagePainter
+import coil.request.ImageRequest
 import coil3.request.transformations
 import androidx.compose.runtime.mutableIntStateOf
 import kotlinx.coroutines.delay

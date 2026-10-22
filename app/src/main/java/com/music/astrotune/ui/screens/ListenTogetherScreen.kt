@@ -87,7 +87,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import coil3.compose.AsyncImage
+import coil.compose.AsyncImage
 import com.music.astrotune.R
 import com.music.astrotune.data.listentogether.JamInviteLink
 import com.music.astrotune.data.listentogether.ListenTogether

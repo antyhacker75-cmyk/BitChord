@@ -21,7 +21,7 @@
  *
  * Taken from EchoMusicApp/Echo-Music, which carries the three modifications
  * listed above; BitChord's own use of it is in
- * [com.music.astrotune.ui.components.GlassNavBar]. One further change here:
+ * [com.music.bitchord.ui.components.GlassNavBar]. One further change here:
  *
  * - `tabBarContentModifier` is a `@Composable () -> Modifier` factory rather
  *   than a single Modifier value. It is applied to three surfaces of three

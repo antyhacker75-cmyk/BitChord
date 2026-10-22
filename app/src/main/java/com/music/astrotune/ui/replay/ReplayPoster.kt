@@ -15,7 +15,7 @@ import androidx.core.content.res.ResourcesCompat
 import androidx.core.graphics.ColorUtils
 import androidx.palette.graphics.Palette
 import coil3.SingletonImageLoader
-import coil3.request.ImageRequest
+import coil.request.ImageRequest
 import coil3.request.SuccessResult
 import coil3.request.allowHardware
 import coil3.toBitmap

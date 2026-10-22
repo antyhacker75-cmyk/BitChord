@@ -1,7 +1,7 @@
 /*
  * The bar's structure and its inline/expanded behaviour are
  * EchoMusicApp/Echo-Music's AppFloatingNavBar + FloatingMiniPlayer (GPL-3.0),
- * over the FloatingTabBar vendored in [com.music.astrotune.ui.components.floatingtabbar].
+ * over the FloatingTabBar vendored in [com.music.bitchord.ui.components.floatingtabbar].
  * BitChord's own tabs, song model, transport and haptics are wired through it in
  * place of Echo's Screens routing and PlayerConnection.
  */
@@ -50,7 +50,7 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import coil3.compose.AsyncImage
+import coil.compose.AsyncImage
 import com.music.astrotune.R
 import com.music.astrotune.data.model.ROW_ART_PX
 import com.music.astrotune.data.model.Song
@@ -94,7 +94,7 @@ fun GlassNavBar(
     onNext: () -> Unit,
     onPrevious: () -> Unit,
     onExpand: () -> Unit,
-    /** @see com.music.astrotune.data.listentogether.ListenTogether.State.controlsLocked */
+    /** @see com.music.bitchord.data.listentogether.ListenTogether.State.controlsLocked */
     controlsLocked: Boolean = false,
     onBlockedControl: () -> Unit = {},
     /** Where the player's artwork lands when it closes into this bar. */

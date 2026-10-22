@@ -47,7 +47,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
-import coil3.compose.AsyncImage
+import coil.compose.AsyncImage
 import com.music.astrotune.R
 import com.music.astrotune.data.model.ROW_ART_PX
 import com.music.astrotune.data.model.Song
