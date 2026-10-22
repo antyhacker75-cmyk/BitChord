@@ -66,7 +66,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.graphics.ColorUtils
-import coil.compose.AsyncImage
+import coil3.compose.AsyncImage
 import com.music.astrotune.R
 import com.music.astrotune.data.model.CARD_ART_PX
 import com.music.astrotune.data.model.HEADER_ART_PX

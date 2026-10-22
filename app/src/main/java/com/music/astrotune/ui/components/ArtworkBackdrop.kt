@@ -16,7 +16,7 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import coil.compose.AsyncImage
+import coil3.compose.AsyncImage
 import com.music.astrotune.data.model.CARD_ART_PX
 import com.music.astrotune.data.model.artworkAt
 import com.music.astrotune.data.settings.AppSettings

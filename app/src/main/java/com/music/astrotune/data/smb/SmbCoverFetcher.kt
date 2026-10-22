@@ -1,11 +1,11 @@
 package com.music.astrotune.data.smb
 
-import coil.ImageLoader
-import coil.decode.ImageSource
-import coil.fetch.FetchResult
-import coil.fetch.Fetcher
-import coil.fetch.SourceFetchResult
-import coil.request.Options
+import coil3.ImageLoader
+import coil3.decode.ImageSource
+import coil3.fetch.FetchResult
+import coil3.fetch.Fetcher
+import coil3.fetch.SourceFetchResult
+import coil3.request.Options
 import okio.FileSystem
 import okio.buffer
 import okio.source
@@ -32,7 +32,7 @@ class SmbCoverFetcher private constructor(private val url: String) : Fetcher {
         return SourceFetchResult(
             source = ImageSource(bytes.inputStream().source().buffer(), FileSystem.SYSTEM),
             mimeType = mime,
-            dataSource = coil.decode.DataSource.NETWORK,
+            dataSource = coil3.decode.DataSource.NETWORK,
         )
     }
 

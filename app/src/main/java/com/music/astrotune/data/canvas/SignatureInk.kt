@@ -1,8 +1,8 @@
 package com.music.astrotune.data.canvas
 
 import android.graphics.Bitmap
-import coil.size.Size
-import coil.transform.Transformation
+import coil3.size.Size
+import coil3.transform.Transformation
 import kotlin.math.roundToInt
 
 /**

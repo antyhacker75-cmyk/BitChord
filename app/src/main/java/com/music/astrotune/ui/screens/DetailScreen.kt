@@ -109,11 +109,11 @@ import androidx.compose.ui.unit.sp
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.border
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import coil.compose.AsyncImage
-import coil.compose.LocalPlatformContext
-import coil.compose.AsyncImagePainter
-import coil.request.ImageRequest
-import coil.request.transformations
+import coil3.compose.AsyncImage
+import coil3.compose.LocalPlatformContext
+import coil3.compose.AsyncImagePainter
+import coil3.request.ImageRequest
+import coil3.request.transformations
 import androidx.compose.runtime.mutableIntStateOf
 import kotlinx.coroutines.delay
 import androidx.compose.ui.layout.layout
@@ -1251,7 +1251,7 @@ private fun ArtistHeader(
                     if (isSignatureSvg) {
                         size(SVG_DECODE_WIDTH, (SVG_DECODE_WIDTH / aspect).roundToInt())
                     } else {
-                        size(coil.size.Size.ORIGINAL)
+                        size(coil3.size.Size.ORIGINAL)
                     }
                     if (isSignatureScan) transformations(SignatureInkTransformation)
                 }.build()
@@ -1798,7 +1798,7 @@ private fun AboutSignature(
             if (isSvg) {
                 size(SVG_DECODE_WIDTH, (SVG_DECODE_WIDTH / aspect).roundToInt())
             } else {
-                size(coil.size.Size.ORIGINAL)
+                size(coil3.size.Size.ORIGINAL)
                 transformations(SignatureInkTransformation)
             }
         }.build()

@@ -14,11 +14,11 @@ import android.graphics.Typeface
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.graphics.ColorUtils
 import androidx.palette.graphics.Palette
-import coil.SingletonImageLoader
-import coil.request.ImageRequest
-import coil.request.SuccessResult
-import coil.request.allowHardware
-import coil.toBitmap
+import coil3.SingletonImageLoader
+import coil3.request.ImageRequest
+import coil3.request.SuccessResult
+import coil3.request.allowHardware
+import coil3.toBitmap
 import com.music.astrotune.R
 import com.music.astrotune.data.model.CARD_ART_PX
 import com.music.astrotune.data.model.artworkAt

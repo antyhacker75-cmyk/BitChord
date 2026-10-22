@@ -55,7 +55,7 @@ import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import coil.compose.AsyncImage
+import coil3.compose.AsyncImage
 import com.music.astrotune.R
 import com.music.astrotune.data.model.PlaylistPrivacy
 import com.music.astrotune.data.model.ROW_ART_PX

@@ -52,7 +52,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import coil.compose.AsyncImage
+import coil3.compose.AsyncImage
 import com.music.astrotune.data.model.ROW_ART_PX
 import com.music.astrotune.data.model.Song
 import com.music.astrotune.data.model.artworkAt
