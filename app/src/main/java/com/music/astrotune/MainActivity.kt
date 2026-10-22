@@ -238,6 +238,8 @@ import com.music.astrotune.ui.components.FloatingBarsTapGuard
 import com.music.astrotune.ui.components.BottomTab
 import com.music.astrotune.ui.components.FLOATING_BAR_MAX_WIDTH
 import com.music.astrotune.ui.components.FloatingBottomBar
+import com.music.astrotune.ui.components.GlassNavBar
+import com.music.astrotune.ui.components.floatingtabbar.rememberFloatingTabBarScrollConnection
 import com.music.astrotune.ui.components.FrostedTopBar
 import com.music.astrotune.ui.components.LastfmLoginAlert
 import com.music.astrotune.ui.components.LocalAppBackdrop
@@ -3972,11 +3974,29 @@ private fun BitChordApp(
                     // component they are stacked to imitate: the now playing
                     // controls dock into the tab bar rather than riding above it,
                     // and the pair folds together on scroll. See [GlassNavBar].
-                    FloatingBottomBar(
+                    GlassNavBar(
                         tabs = tabs,
                         selectedIndex = selectedTab,
-                        hazeState = hazeState,
                         onTabSelected = onTabSelected,
+                        scrollConnection = navBarScroll,
+                        song = player.song,
+                        isPlaying = player.isPlaying,
+                        isLoading = playPauseBusy,
+                        onPlayPause = {
+                            togglePlayPause()
+                        },
+                        onNext = { controller?.seekToNextMediaItem() },
+                        onPrevious = { controller?.seekToPrevious() },
+                        onExpand = if (reducePlayerMotion) {
+                            { showNowPlaying = true }
+                        } else {
+                            playerSheetMotion::open
+                        },
+                        controlsLocked = controlsLocked,
+                        onBlockedControl = showHostOnlyNotice,
+                        dock = activeDock,
+                        pull = playerSheetMotion.takeIf { !reducePlayerMotion },
+                        modifier = Modifier.fillMaxWidth(),
                     )
                 } else Column(
                     modifier = Modifier

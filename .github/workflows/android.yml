@@ -8,6 +8,7 @@ on:
 jobs:
   build-prod-release:
     runs-on: ubuntu-latest
+
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v4
@@ -23,6 +24,7 @@ jobs:
       run: |
         echo "LASTFM_API_KEY=${{ secrets.LASTFM_API_KEY }}" > local.properties
         echo "LASTFM_SECRET=${{ secrets.LASTFM_SECRET }}" >> local.properties
+
         echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > bitchord-release.jks
         {
           echo "storeFile=bitchord-release.jks"
@@ -34,22 +36,6 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
 
-    - name: Install NDK (Retry on corruption)
-      run: |
-        NDK_VERSION="27.0.12077973"
-        for i in 1 2 3; do
-          echo "Attempt $i to install NDK $NDK_VERSION..."
-          if echo "y" | ${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager --install "ndk;${NDK_VERSION}"; then
-            echo "NDK installed successfully"
-            exit 0
-          fi
-          echo "NDK install failed, cleaning partial download..."
-          rm -rf "${ANDROID_HOME}/ndk/${NDK_VERSION}"
-          rm -rf "${ANDROID_HOME}/.downloadIntermediates"
-          sleep 5
-        done
-        exit 1
-
     - name: Build Signed Prod Release APK
       run: ./gradlew assembleProdRelease
 
@@ -59,6 +45,9 @@ jobs:
         name: bitchord-prod-release-signed
         path: app/build/outputs/apk/prod/release/*.apk
 
+    # Built by the same assembleProdRelease, with the same key. The watch app
+    # only pairs with a phone app signed by the same key, so a prod watch APK
+    # for these phone builds can only come from here, never a local build.
     - name: Upload Wear OS APK Artifact
       uses: actions/upload-artifact@v4
       with:
