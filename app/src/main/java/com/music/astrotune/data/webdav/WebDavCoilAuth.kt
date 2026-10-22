@@ -1,9 +1,9 @@
 package com.music.astrotune.data.webdav
 
-import coil3.intercept.Interceptor
-import coil3.network.NetworkHeaders
-import coil3.network.httpHeaders
-import coil3.request.ImageResult
+import coil.intercept.Interceptor
+import coil.network.NetworkHeaders
+import coil.network.httpHeaders
+import coil.request.ImageResult
 
 /**
  * Attaches the WebDAV credential to cover loads aimed at the configured

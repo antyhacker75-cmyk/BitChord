@@ -15,11 +15,11 @@ import android.graphics.RectF
 import android.graphics.Shader
 import android.os.SystemClock
 import android.util.LruCache
-import coil3.SingletonImageLoader
+import coil.SingletonImageLoader
 import coil.request.ImageRequest
-import coil3.request.SuccessResult
-import coil3.request.allowHardware
-import coil3.toBitmap
+import coil.request.SuccessResult
+import coil.request.allowHardware
+import coil.toBitmap
 import com.music.astrotune.data.model.CARD_ART_PX
 import com.music.astrotune.data.model.HEADER_ART_PX
 import com.music.astrotune.data.model.NOTIFICATION_ART_PX

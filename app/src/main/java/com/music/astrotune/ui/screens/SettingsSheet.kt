@@ -133,7 +133,7 @@ import androidx.compose.ui.text.withLink
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import coil3.SingletonImageLoader
+import coil.SingletonImageLoader
 import coil.compose.AsyncImage
 import com.music.astrotune.ui.components.isGlassSupported
 import com.music.astrotune.ui.components.languageDisplayNameRes
