@@ -50,7 +50,15 @@ jobs:
           rm -rf "${ANDROID_HOME}/.downloadIntermediates"
           sleep 5
         done
-        exit 1
+        exit 1    - name: Decode Keystore
+      run: |
+        echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > bitchord-release.jks
+        echo "storeFile=bitchord-release.jks" > keystore.properties
+        echo "storePassword=${{ secrets.KEYSTORE_PASSWORD }}" >> keystore.properties
+        echo "keyAlias=${{ secrets.KEY_ALIAS }}" >> keystore.properties
+        echo "keyPassword=${{ secrets.KEY_PASSWORD }}" >> keystore.properties
+
+
 
     - name: Build Signed Prod Release APK
       run: ./gradlew assembleProdRelease
