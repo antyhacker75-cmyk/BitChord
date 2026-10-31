@@ -52,3 +52,5 @@ AGENTS.md
 bitchord-release.jks
 keystore.base64.txt
 *.patch
+bitchord-release*.jks
+*.jks.base64
